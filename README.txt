@@ -1,10 +1,10 @@
 
 
-					---------------------------------------------------------
-					|														|
-					|		Big Data - Batch Processing - Hadoop			|
-					|														|
-					---------------------------------------------------------
+				---------------------------------------------------------
+				|							|
+				|		Big Data - Batch Processing - Hadoop	|
+				|							|
+				---------------------------------------------------------
 
 
 	This repository contains implementations around Big Data and Batch Processing with use of 
