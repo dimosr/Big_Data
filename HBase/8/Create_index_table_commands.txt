@@ -1,0 +1,17 @@
+##Create the table in HBase##
+- hbase shell
+- create 'index','keyword','article'
+- exit
+
+##Read from 'content' table and write in region files the invert-index records##
+- hadoop jar CreateCorrespondences.jar adts.CreateCorrespondences /user/root/3.2
+
+##Creating the Region files (in the URI /user/root/output) needed for bulk loading##
+- hadoop jar /opt/hbase-0.94.16/hbase-0.94.16.jar importtsv -Dimporttsv.bulk.output=output -Dimporttsv.columns=HBASE_ROW_KEY,keyword,article index /root/invert_index/part-r-00000
+
+##Changing the permission so that Hbase can modify##
+hadoop dfs -chown -R   hbase:hbase/root/invert_index
+
+##Creating the table rows with bulk loading from the Region files created##
+hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles output index
+
