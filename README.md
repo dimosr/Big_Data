@@ -1,4 +1,5 @@
-Big Data - Batch Processing (with Hadoop-HBase)
+Big Data - Batch Processing 
+(with Hadoop-HBase)
 ===============================================
 
 Introduction
