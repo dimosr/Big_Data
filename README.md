@@ -9,8 +9,8 @@ MapReduce was used to save and analyze Big Data sets.
 HBase was used to insert and edit the prrevious data in order to be able to execute queries.
 The data set that was used contained real user queries in Google Search Engine and a set containing the titles of all Wikipedia articles.
 
-The file containing the queries was taken from the dataset released from [AOLSource](http://en.wikipedia.org/wiki/AOL_search_data_leak), with the exact files being available [here](https://github.com/dimosr7/Big_Data/tree/master/resources/user-ct-test-collection-01.txt.gz)
-The file containing the titles of all Wikipedia articles was taken from [Wikipedia Source](dumps.wikimedia.org/enwiki/latest/enwiki-latest-all-titles-in-ns0.gz), with the exact files being available [here](https://github.com/dimosr7/Big_Data/tree/master/resources/enwiki-latest-all-titles-in-ns0.gz)
+The file containing the queries was taken from the dataset released from [AOLSource](http://en.wikipedia.org/wiki/AOL_search_data_leak), with the exact files being available [here](https://github.com/dimosr7/Big_Data/tree/master/resources/user-ct-test-collection-01.txt.gz).
+The file containing the titles of all Wikipedia articles was taken from [Wikipedia Source](dumps.wikimedia.org/enwiki/latest/enwiki-latest-all-titles-in-ns0.gz), with the exact files being available [here](https://github.com/dimosr7/Big_Data/tree/master/resources/enwiki-latest-all-titles-in-ns0.gz).
 
 There are multiple parts/sub-projects in this repository
 
@@ -33,7 +33,7 @@ Successfull queries were those that resulted in selection of pages and the unsuc
 A MapReduce algorithm was implemented in order to analyse the most "visited" webpages. The output was a list, where the first column contained the URLs of webpages that were visited by more than 10 users and the second column contained those users. 
 
 4. "Popular" Keywords in Searches
-A MapReduce algorithm was implemented in order to analyse the most used keywords in queries. The output was a list, where the first column contained the 50 most searched keywords and the second column contained the number each keyword was used. The "noise" was removed by removing the unnecessary stop words, by using the following [list](http://jmlr.csail.mit.edu/papers/volume5/lewis04a/a11-smart-stop-list/english.stop) from MIT University, also available [here](https://github.com/dimosr7/Big_Data/tree/master/resources/english-stop.txt)
+A MapReduce algorithm was implemented in order to analyse the most used keywords in queries. The output was a list, where the first column contained the 50 most searched keywords and the second column contained the number each keyword was used. The "noise" was removed by removing the unnecessary stop words, by using the following [list](http://jmlr.csail.mit.edu/papers/volume5/lewis04a/a11-smart-stop-list/english.stop) from MIT University, also available [here](https://github.com/dimosr7/Big_Data/tree/master/resources/english-stop.txt).
 
 5. Histograms of Lexicographic Distribution.
 A MapReduce algorithm was implemented in order to analyse the format of keywords and categorize them depending on the first letter. The output was a histogram of different categories of keywords depending on the starting letter. The Histogram program was used to create 3 histograms with different sample size : 50,1000 and all the Wikipedia titles. The Partitioner and Sorter programs were used to partition in almost same-sized categories the keywords and afterwards sort them alphabetically.
