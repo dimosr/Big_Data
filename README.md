@@ -81,6 +81,7 @@ Afterwards, we have to edit the /etc/hosts file of all computers so that they kn
 192.168.0.2 	master
 192.168.0.3 	slave1
 192.168.0.4 	slave2
+```
 
 In order to have the keys created in all PCs, we run the following commands in the slaves in order to copy them from the master :
 ```sh
@@ -88,6 +89,7 @@ cd /root/
 scp -r .ssh slave1:/root/ 		#password will be asked
 scp -r .ssh slave2:/root/ 		#password will be asked
 ssh slave1 		#if everything went well, we will be able to connect without password
+```
 
 Another Requirement is that JVM has been installed in master and slaves
 
